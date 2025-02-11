@@ -45,7 +45,7 @@ function [PAF, IAF_cog, spectra, freqs] = compute_iaf(inpt, channel, EEG)
     
     % get log PSD spectra of specific channel in EEG data
     [spectra_psd,freqs] = spectopo(EEG.data(channel,:,:), 0, sr, 'winsize', winsize, 'overlap', overlap, 'limits', [0 25 nan nan nan nan], 'plot', 'off');
-    spectra_abs = 10.^(spectra_psd/10); 
+    spectra_abs = 10.^(spectra_psd/10); %absolute power 
     spectra = spectra_abs; 
 
     % extract frequency indices and spectra of interest
