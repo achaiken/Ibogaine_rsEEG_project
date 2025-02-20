@@ -34,7 +34,7 @@
 %   spectra (type: numeric array) -- The power spectrum of the specified
 %                                channel
 %
-function [PAF, IAF_cog, spectra, freqs] = compute_iaf(inpt, channel, EEG)
+function [PAF, IAF_cog, spectra, freqs] = compute_IAFandPAF(inpt, channel, EEG)
     
     fmin = inpt.fmin;                
     fmax = inpt.fmax;                
